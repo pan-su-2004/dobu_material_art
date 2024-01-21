@@ -1,0 +1,80 @@
+.services_text {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.services_text span {
+  color: rgb(0, 219, 253);
+  font-size: 30px;
+}
+
+/* Service trainers images */
+
+.image-container-service {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px;
+}
+.image-wrapper-service img {
+  width: 180px;
+  height: 180px;
+  border-radius: 40% 50% / 20% 40%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.image-wrapper-service p {
+  color: white;
+  margin-top: 10px;
+}
+
+/* Services img section */
+.middle_text_services p {
+  margin: 25px 30px 20px 30px;
+  text-align: center;
+  font-size: 14px;
+}
+/* Facilities text */
+.facilities_text_section {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin: 40px;
+  align-items: center;
+}
+.text-container h3 {
+  color: rgb(3, 228, 240);
+}
+.text-container p {
+  font-size: 14px;
+}
+
+/* Gym bag and bottle */
+.card-container-accessories {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-accessories {
+  text-align: center;
+}
+
+.card-accessories img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20% 10% / 20% 15%;
+}
+
+.card-accessories-text {
+  margin-top: 10px;
+  color: white;
+}
+
+.card-accessories-text h3 {
+  font-size: 18px;
+  font-weight: bold;
+}

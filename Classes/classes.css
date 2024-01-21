@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  background-image: url();
+}
+body {
+  z-index: -9;
+  background-color: #000000fe;
+  position: relative;
+}
+
+/* Cards */
+.card_container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  margin-bottom: 30px;
+}
+.card {
+  border: 1px solid;
+  border-radius: 15px 15px 0 0;
+  border-color: #08d2ff;
+  width: 300px;
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+.Card_body {
+  padding: 10px;
+  text-align: center;
+}
+.card_title {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  text-align: center;
+  color: #08d2ff;
+}
+.card_text {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 15px;
+  color: white;
+  margin-bottom: 20px;
+}
+.card_img {
+  display: block;
+  width: 100%;
+}
+
+/* Read More Home Button */
+
+.card_join_btn {
+  background-color: rgb(15, 122, 151);
+  color: #9be1fa;
+  padding: 15px;
+  border-radius: 10px;
+  border-color: #22292b;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-block;
+  width: 150px;
+}
+.card_join_btn:active {
+  box-shadow: rgb(50, 182, 225) 0 3px 7px;
+  transform: translateY(2px);
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+}
+tr,
+th,
+td {
+  /* border: var(--btn-border); */
+  border: var(--btn-border);
+  padding: 1rem;
+}
+.table_container {
+  margin: 10px;
+}
+
+.schedule_title {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: white;
+}
+
+tr:hover {
+  background-color: rgb(15, 214, 244);
+}

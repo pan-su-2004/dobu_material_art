@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../Register/register.html">
+        <link rel="stylesheet" href="../Home/index.css">
+        <script src="https://kit.fontawesome.com/5c1d0bf1ad.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
+       <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            text-decoration: none;
+            list-style: none;
+        }
+        body{
+            background-color: #47E8FB;
+            
+        }
+        /* Image */
+           .container img{
+            /* background-image: url("../Img/thankyou.jpg"); */
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+           }
+           /* Navigation */
+           .nav_color{
+            background: linear-gradient(500deg,#374783,#304F90,#1D4A8E,#077DD6 );
+           }
+           
+           /* Buttons */
+                    
+            .read_btn_thankyou{
+            display: inline-block;
+            /* border-radius: px; */
+            background-color: #05c0e1;
+            border: none;
+            color: #ffffff;
+            text-align: center;
+            font-size: 15px;
+            padding: 13px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 3px;
+            border-radius: 20px;
+            }
+
+            .read_btn_thankyou span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            }
+
+            .read_btn_thankyou span:after {
+            content: "\00bb";
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+            }
+
+            .read_btn_thankyou:hover span {
+            padding-right: 25px;
+            }
+
+            .read_btn_thankyou:hover span:after {
+            opacity: 1;
+            right: 0;
+            }
+
+            .thankyou{
+                color:black;
+            width: 50%;
+            padding: 8rem 4rem;
+            }
+            /* Container holding the image and the text */
+            .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+            /* Centered text */
+            .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+
+            .container h1{
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+            .container p{
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+            /* Footer */
+            .wave_shape .shape-fill {
+            fill: #52E3FD;
+            }
+       </style>
+    </head>
+<body>
+
+        <!-- navigation bar -->
+        <header class="nav_color">
+            <div class="logo">
+                <img src="../Img/logo3.png" alt="logo">
+                <span>DOBU</span>
+            </div>
+            <nav>
+                <ul class="nav_link">
+                    <li><a href="../Home/index.html">Home</a></li>
+                    <li><a href="../Classes/classes.html">Classes</a></li>
+                    <li><a href="../Membership/membership.html">Membership</a></li>
+                    <li><a href="../Services/services.html">Services</a></li>
+                    <li><a href="../ContactUs/contactus.html">Contact US</a></li>
+                </ul>
+            </nav>
+            <div class="btn">
+                <a href="../Register/register.html" class="Register_btn">Register Now</a>
+                <!-- <button type="button" class="login"><i class="fa-solid fa-user"></i>Login</button> -->
+            </div>
+        </header>
+
+        <!-- Image and text -->
+        <div class="container">
+            <img src="../Img/thankyou.jpg" alt="Snow" style="width:100%;">
+            <div class="centered">
+                <h1>Thank you for signing up!</h1>
+                <p>We will contact you shortly with more details!</p>
+                <a href="../Classes/classes.html" class="read_btn_thankyou"> <span>See your schedule</span> </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="wave_shape">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                  <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+              </svg>
+            </div>
+            <div class="footer-container">
+              <div class="footer-text_search">
+                <h3>Connect with us</h3>
+                <p>Follow us on social media and stay updated with the latest news and offers.</p>
+                    <div class="search">
+                        <span class="fa fa-search"></span>
+                        <input placeholder="Search">
+                    </div>
+              </div>
+              
+              <div class="footer-sitemap">
+                <h3>Site Links</h3>
+                <ul>
+                  <li><a href="../Register/register.html">Home</a></li>
+                  <li><a href="../Classes/classes.html">Classes</a></li>
+                  <li><a href="../Services/services.html">Services</a></li>
+                  <li><a href="../Membership/membership.html">Membership</a></li>
+                  <li><a href="../ContactUs/contactus.html">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="footer-social">
+                <h3>Follow us</h3>
+                <ul>
+                  <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://www.instargram.com/"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                  <li><a href="https://www.google.com/"><i class="fab fa-google"></i></a></li>
+                </ul>
+              </div>
+            </div>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Admin.css">
+    <link rel="stylesheet" href="./Register/register.css">
+    <link rel="stylesheet" href="./Home/index.css">
+    <script src="https://kit.fontawesome.com/5c1d0bf1ad.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="Admin.js"></script>
+</head>
+<body>
+
+  <div class="bg_image_admin"></div>
+
+   <!-- navigation bar -->
+      <header>
+        <div class="logo">
+            <img src="../Img/logo3.png" alt="logo">
+            <span>DOBU</span>
+        </div>
+        <nav>
+            <ul class="nav_link">
+                <li><a href="../Home/index.html">Home</a></li>
+                <li><a href="../Classes/classes.html">Classes</a></li>
+                <li><a href="../Membership/membership.html">Membership</a></li>
+                <li><a href="../Services/services.html">Services</a></li>
+                <li><a href="../ContactUs/contactus.html">Contact US</a></li>
+            </ul>
+        </nav>
+        <div class="btn">
+            <a href="../Register/register.html" class="Register_btn">Register Now</a>
+            <!-- <button type="button" class="login"><i class="fa-solid fa-user"></i>Login</button> -->
+        </div>
+      </header>
+
+      <!-- Table -->
+      <div class="container">
+      
+        <fieldset>
+            <legend>
+                Users List
+            </legend>
+            <table id="table" class="table">
+                <thead>
+                    <tr>
+                        <th>UserId</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Classes</th>
+                        <th>Gender</th>
+                        <th>Password</th>
+                        <th>Action Edit</th>
+                        <th>Action Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </fieldset>
+      </div>
+    
+      <!-- Edit form -->
+      <div id="edit_form_container"  style="display: none;">
+        <form id="editForm">
+          <label for="fname">Name</label>
+          <input type="text" id="newName" name="name" placeholder="Your name.." >
+
+          <label for="emial">Email</label>
+          <input type="email" id="newEmail" name="email" placeholder="Your email.." >
+
+          <fieldset class="gender_field">
+            <legend><label for="radio"><h4>Gender</h4></label></legend>
+            <div class="radio">
+                <div class="radio_container">
+                    <input type="radio" name="radioNew" id="radio1" value="male" >
+                    <label for="radio1">Male</label>
+                </div>
+                <div class="radio_container">
+                    <input type="radio" name="radioNew" id="radio2" value="female">
+                    <label for="radio2">Female</label>
+                </div>
+            </div>
+        </fieldset>
+
+          <div class="clearfix">
+            <button type="reset" id="closeButtonEdit" class="cancel_btn">Cancel</button>
+            <button type="submit" class="signup_btn">Change</button>
+          </div>
+      </form>
+      </div>
+
+      <!-- addd  form -->
+      <div id="add_form_container"  style="display: none;">
+        <form id="addForm">
+          <label for="fname">Name</label>
+          <input type="text" id="name" name="firstname" placeholder="Your name.." >
+
+          <label for="emial">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email.." >
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" id="password" name="password" placeholder="Enter Password" >
+
+          <fieldset class="gender_field">
+            <legend><label for="radio"><h4>Gender</h4></label></legend>
+            <div class="radio">
+                <div class="radio_container">
+                    <input type="radio" name="radio" id="newGender1" value="male">
+                    <label for="newGender1">Male</label>
+                </div>
+                <div class="radio_container">
+                    <input type="radio" name="radio" id="newGender2" value="female">
+                    <label for="newGender2">Female</label>
+                </div>
+            </div>
+        </fieldset>
+
+          <div class="clearfix">
+            <button type="reset" id="closeButton" class="cancel_btn">Cancel</button>
+            <button type="submit" class="signup_btn">Add</button>
+          </div>
+      
+      </form>
+      </div>
+
+      <!-- ---- Added Success and Fail Message -- -->
+      <div class="success_container ">
+          <h4>Added Successfully</h4>
+      </div>
+      <div class="fail_container ">
+          <h4>Please Fail all Field!!</h4>
+      </div>
+
+      <!--  ----Deleted Success --- -->
+      <div class="delete_container ">
+          <h4>Deleted Successfully !!</h4>
+      </div>
+
+      <!--  ---- Changed Success Full Message --  -->
+      <div class="changed_container ">
+          <h4>Changed Successfully !!</h4>
+      </div>
+
+          <!-- Footer -->
+      <footer>
+            <div class="wave_shape">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                  <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+              </svg>
+            </div>
+            <div class="footer-container">
+              <div class="footer-text_search">
+                <h3>Connect with us</h3>
+                <p>Follow us on social media and stay updated with the latest news and offers.</p>
+                    <div class="search">
+                        <span class="fa fa-search"></span>
+                        <input placeholder="Search">
+                    </div>
+              </div>
+              
+              <div class="footer-sitemap">
+                <h3>Site Links</h3>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="../Classes/classes.html">Classes</a></li>
+                  <li><a href="../Services/services.html">Services</a></li>
+                  <li><a href="../Membership/membership.html">Membership</a></li>
+                  <li><a href="../ContactUs/contactus.html">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="footer-social">
+                <h3>Follow us</h3>
+                <ul>
+                  <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://www.instargram.com/"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                  <li><a href="https://www.google.com/"><i class="fab fa-google"></i></a></li>
+                </ul>
+              </div>
+            </div>
+      </footer>
+
+</body>
+</html>
